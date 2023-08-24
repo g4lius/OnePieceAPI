@@ -96,13 +96,15 @@ export const updateCharacter = async (req, res) => {
 
     if (character) {
         try {
-            character.currentBounty = req.body.currentBounty;
-            character.previousBounty = req.body.previousBounty;
             character.name = req.body.name
+            character.fruit = req.body.fruit
+            character.currentAffiliation = req.body.currentAffiliation
+            character.role = req.body.role
+            character.previousAffiliation = req.body.previousAffiliation
             character.origin = req.body.origin
             character.provenance = req.body.provenance
-            character.previousAffiliation = req.body.previousAffiliation
-            character.role = req.body.role
+            character.currentBounty = req.body.currentBounty
+            character.previousBounty = req.body.previousBounty
 
             const updatedCharacter = await Character.findByIdAndUpdate(
                 character._id,

@@ -13,4 +13,8 @@ router.get('/provenance', getCharacterProvenance)
 router.get('/currentbounty', getCharacterCurrentBounty)
 router.get('/previousbounty', getCharacterPreviousBounty)
 
+
+router.patch('/', updateCharacter)
+
+
 export default router

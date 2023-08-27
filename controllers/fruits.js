@@ -1,6 +1,18 @@
 import { Fruit } from '../models/fruits.js'
 import mongoose from 'mongoose'
 
+export const addFruit = async (req, res) => {
+    const fruit = req.body
+    const newFruit = new Fruit(fruit)
+
+    try {
+        await newFruit.save()
+        res.status(201).json(newFruit)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+}
+
 export const getAllFruits = async (req, res) => {
     try {
         const fruits = await Fruit.find()

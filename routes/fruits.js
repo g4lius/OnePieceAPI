@@ -1,9 +1,11 @@
 import express from 'express'
-import { getAllFruits, getFruitType, getFruitNameOwner, getFruitInformationOwner, getFruitsByType, getFruitByName } from '../controllers/fruits.js'
+import { addFruit, getAllFruits, getFruitType, getFruitNameOwner, getFruitInformationOwner, getFruitsByType, getFruitByName } from '../controllers/fruits.js'
 
 import extractFruitMiddleware from '../middleware/extractfruitname.js'
 
 const router = express.Router()
+
+router.post('/', addFruit)
 
 router.get('/', getAllFruits)
 router.get('/:name', getFruitByName)

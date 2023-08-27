@@ -86,15 +86,3 @@ export const getCharactersByFruit = async (req, res) => {
         res.status(404).json({ message: error.message });
     }
 }
-
-export const addCharacter = async (req, res) => {
-    const character = req.body
-    const newCharacter = new Character(character)
-
-    try {
-        await newCharacter.save()
-        res.status(201).json(newCharacter)
-    } catch (error) {
-        res.status(409).json({ message: error.message })
-    }
-}

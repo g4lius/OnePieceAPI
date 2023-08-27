@@ -1,10 +1,9 @@
 import express from 'express'
-import { getAllCharacters, addCharacter, getCharacterByName, getCharactersByRole, getCharactersByAffiliation, getCharactersByPreviousAffiliation, getCharactersByOrigin, getCharactersByProvenance, getCharactersByFruit } from '../controllers/characters.js'
+import { getAllCharacters, getCharacterByName, getCharactersByRole, getCharactersByAffiliation, getCharactersByPreviousAffiliation, getCharactersByOrigin, getCharactersByProvenance, getCharactersByFruit } from '../controllers/characters.js'
 
 const router = express.Router()
 
 router.get('/', getAllCharacters)
-router.post('/', addCharacter)
 router.get('/name/:name', getCharacterByName)
 router.get('/role/:role', getCharactersByRole)
 router.get('/currentaffiliation/:currentAffiliation', getCharactersByAffiliation)

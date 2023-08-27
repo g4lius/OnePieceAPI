@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { getCharacterRole, getCharacterFruit, getCharacterCurrentAffiliation, getCharacterPreviousAffiliation, getCharacterOrigin, getCharacterProvenance, getCharacterCurrentBounty, getCharacterPreviousBounty, updateCharacter } from '../controllers/singlecharacters.js'
+import { getCharacterRole, getCharacterFruit, getCharacterCurrentAffiliation, getCharacterPreviousAffiliation, getCharacterOrigin, getCharacterProvenance, getCharacterCurrentBounty, getCharacterPreviousBounty } from '../controllers/singlecharacters.js'
 
 const router = express.Router()
 
@@ -12,9 +12,5 @@ router.get('/origin', getCharacterOrigin)
 router.get('/provenance', getCharacterProvenance)
 router.get('/currentbounty', getCharacterCurrentBounty)
 router.get('/previousbounty', getCharacterPreviousBounty)
-
-
-router.patch('/', updateCharacter)
-
 
 export default router

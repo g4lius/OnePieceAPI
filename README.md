@@ -1,4 +1,4 @@
-# OnePieceAPI
+![blue-one-piece-logo-gd0tssc8imqdtmwt](https://github.com/g4lius/OnePieceAPI/assets/96180380/c53d03ff-69d4-4d9a-8d86-e91839e43bd1)
 
 Welcome to the OnePieceAPI project! This project provides a set of APIs related to the popular anime and manga series "One Piece".
 
@@ -30,6 +30,7 @@ Get information about all characters.
 | `/characters/provenance/:provenance`   | Retrieve a list of all characters with the selected provenance.               |
 | `/characters/fruit/:fruit`             | Search for the character with the selected Devil Fruit.   |
 
+
 ### Single Characters
 
 Get informations about a single character.
@@ -45,6 +46,7 @@ Get informations about a single character.
 | `/singlecharacters/:name/currentbounty`              | Retrieve the current bounty of a specific character.      |
 | `/singlecharacters/:name/previousbounty`             | Retrieve the previous bounty of a specific character.     |
 
+
 ### Devil Fruits
 
 Get informations about Devil Fruits.
@@ -58,6 +60,7 @@ Get informations about Devil Fruits.
 | `/fruits/:name/owner`                          | Get detailed information about the owner of a specific Devil Fruit. |
 | `/fruits/type/:type`                           | Get a list of Devil Fruits by type.                       |
 
+
 ## Getting Started
 
 You can get started with the OnePieceAPI in two ways: by cloning the repository and setting it up yourself, or by directly using the deployed version.
@@ -66,7 +69,7 @@ You can get started with the OnePieceAPI in two ways: by cloning the repository 
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
     ```bash
-    git clone https://github.com/your-username/OnePieceAPI.git
+    git clone https://github.com/g4lius/OnePieceAPI.git
     ```
 
 2. **Navigate to the Project Directory**: Navigate to the project directory:
@@ -89,13 +92,10 @@ You can get started with the OnePieceAPI in two ways: by cloning the repository 
 ### Option 2: Using the Deployed Version
 
 You can directly make API requests to the deployed version of OnePieceAPI without setting up anything. Simply use the following base URL for making requests:
- ```bash
+
     https://onepieceapi-f910ec92e358.herokuapp.com/
-    ```
 
-You can start making requests to the available endpoints by appending the desired paths to the base URL.
-You can use Postman, Browser or or whichever you prefer. 
-
+You can start making requests to the available endpoints by appending the desired paths to the base URL. You can use Postman, a browser, or whichever method you prefer.
 
 ## Contributing
 
@@ -104,7 +104,3 @@ Contributions to the OnePieceAPI project are welcome! If you find any issues or 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-If you have any questions or suggestions, you can reach out to us at galiavincenzo@gmail.com.

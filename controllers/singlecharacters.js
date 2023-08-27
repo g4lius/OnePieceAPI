@@ -88,36 +88,3 @@ export const getCharacterPreviousBounty = async (req, res) => {
         res.status(404).json({ message: error.message })
     }
 }
-
-// -----------------------
-
-export const updateCharacter = async (req, res) => {
-    const character = req.character;
-
-    if (character) {
-        try {
-            character.name = req.body.name
-            character.fruit = req.body.fruit
-            character.currentAffiliation = req.body.currentAffiliation
-            character.role = req.body.role
-            character.previousAffiliation = req.body.previousAffiliation
-            character.origin = req.body.origin
-            character.provenance = req.body.provenance
-            character.currentBounty = req.body.currentBounty
-            character.previousBounty = req.body.previousBounty
-
-            const updatedCharacter = await Character.findByIdAndUpdate(
-                character._id,
-                { currentBounty: character.currentBounty, previousBounty: character.previousBounty, name: character.name, origin: character.origin, 
-                    previousAffiliation: character.previousAffiliation, role: character.role, provenance: character.provenance },
-                { new: true }
-            );
-
-            res.status(200).json(updatedCharacter);
-        } catch (error) {
-            res.status(400).json({ message: error.message });
-        }
-    } else {
-        res.status(404).json({ message: error.message });
-    }
-}

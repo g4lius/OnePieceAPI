@@ -89,7 +89,7 @@ You can get started with the OnePieceAPI in two ways: by cloning the repository 
     npm start
     ```
 
-### Option 2: Using the Deployed Version
+### Option 2: Using the Deployed Version (No more available)
 
 You can directly make API requests to the deployed version of OnePieceAPI without setting up anything. Simply use the following base URL for making requests:
 
